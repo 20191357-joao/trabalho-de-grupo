@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Loja de T-shirts - Miradouro Hotel</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body class="corpo-loja">
+
+   <header style="padding: 20px; text-align: center;">
+    <a href="index.html" class="voltar-link" style="font-size: 1.2rem;">← Voltar ao Hotel</a>
+	</header>
+
+	<section class="loja-tshirts">
+    <h2 class="titulo-loja-tshirts" style="text-align: center; letter-spacing: 5px; margin-bottom: 40px; text-transform: uppercase;">
+        T-SHIRTS DISPONÍVEIS
+    </h2>
+        
+        <div class="container-cards">
+            <div class="tshirt-card">
+                <img src="imagem/T-shirt_branca.png.png" alt="T-shirt Branca">
+                <h3>T-Shirt Branca</h3>
+                <p id="p1" class="preco" style="display: none;">25,00€</p>
+                <button class="btn-selecionar" onclick="mostrarPreco('p1')">SELECIONAR</button>
+            </div>
+
+            <div class="tshirt-card">
+                <img src="imagem/T-shirt_azul.png.png" alt="T-shirt Azul Marinho">
+                <h3>T-Shirt Azul Marinho</h3>
+                <p id="p2" class="preco" style="display: none;">25,00€</p>
+                <button class="btn-selecionar" onclick="mostrarPreco('p2')">SELECIONAR</button>
+            </div>
+
+            <div class="tshirt-card">
+                <img src="imagem/T-shirt_marrom.png.png" alt="T-shirt Marrom Claro">
+                <h3>T-Shirt Marrom</h3>
+                <p id="p3" class="preco" style="display: none;">25,00€</p>
+                <button class="btn-selecionar" onclick="mostrarPreco('p3')">SELECIONAR</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

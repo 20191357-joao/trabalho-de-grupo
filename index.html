@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Miradouro Hotel Lisboa</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <section class="hero-container">
+        <h1 class="titulo-manuscrito">Miradouro</h1>
+        <h2 class="titulo-hotel">HOTEL</h2>
+        <p class="subtitulo-lisboa">LISBOA</p>
+    </section>
+
+    <section class="info-hotel-detalhes">
+        <div class="info-card">
+            <h3>Morada</h3>
+            <p>Rua das Amoreiras, 123, Lisboa</p>
+        </div>
+        <div class="info-card">
+            <h3>Horário</h3>
+            <p>Receção: Aberta 24h</p>
+        </div>
+        <div class="info-card">
+            <h3>Estadia</h3>
+            <p>Quartos a partir de 120€ / noite</p>
+        </div>
+    </section>
+
+    <section class="secao-nif">
+        <div class="nif-box">
+            <label for="nifInput">Para visualizar a página das t-shirts, introduza um NIF válido:</label><br>
+            <input type="text" id="nifInput" maxlength="9" placeholder="NIF (9 dígitos)" oninput="validarNIF()">
+            <br>
+            <button id="btnAcesso" onclick="abrirLoja()" disabled>Aceder às T-shirts</button>
+        </div>
+    </section>
+
+    <script>
+        function validarNIF() {
+            const input = document.getElementById('nifInput');
+            const btn = document.getElementById('btnAcesso');
+            const v = input.value;
+            
+            if (isNaN(v) && v !== "") {
+                input.style.backgroundColor = "yellow"; 
+                btn.disabled = true;
+            } 
+            else if (v.length === 9 && !isNaN(v)) {
+                input.style.backgroundColor = "#90ee90"; 
+                btn.disabled = false;
+            } 
+            else {
+                input.style.backgroundColor = "white";
+                btn.disabled = true;
+            }
+        }
+
+        function abrirLoja() {
+           
+            window.location.href = "t-shirts.html";
+        }
+    </script>
+</body>
+</html>
